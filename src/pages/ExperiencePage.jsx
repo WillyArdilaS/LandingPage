@@ -6,8 +6,8 @@ export const ExperiencePage = () => {
   return (
     <Container maxWidth="full" sx={{
       flexGrow: 1,
-      paddingX: {xs: 5, md: 16},
-      paddingY: 6,
+      paddingTop: {xs: 10, md: 14},
+      paddingBottom: 8,
       backgroundColor: 'primary.main'
     }}>
 

@@ -8,7 +8,8 @@ export const HomePage = () => {
     <Container maxWidth="full" sx={{
       flexGrow: 1,
       paddingX: {xs: 5, md: 16},
-      paddingY: 6,
+      paddingTop: {xs: 12, md: 16},
+      paddingBottom: 8,
       backgroundColor: 'white.main'
     }}>
 
@@ -50,7 +51,7 @@ export const HomePage = () => {
             width: "10%",
             height: "20%",
             marginX: "auto",
-            marginY: 2,
+            marginY: 4,
             '& svg': {
               fontSize: 54,
             },

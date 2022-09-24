@@ -33,6 +33,6 @@ export const Portfolio = [
         stack: "React - JSX - MaterialUI",
         link_preview: "#",
         link_github: "https://github.com/WillyArdilaS/LandingPage",
-        image: "#"
+        image: "LandingPage.png"
     }
 ]
