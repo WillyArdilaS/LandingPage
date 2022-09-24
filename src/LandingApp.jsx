@@ -1,7 +1,10 @@
+import { LandingPage } from "./pages/LandingPage";
+import { AppTheme } from "./themes/AppTheme";
+
 export function LandingApp() {
   return (
-    <div className="App">
-      Landing page
-    </div>
+    <AppTheme>
+      <LandingPage />
+    </AppTheme>
   )
 }
