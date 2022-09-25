@@ -3,7 +3,7 @@ import { Box, Grid, IconButton, Typography } from "@mui/material"
 import { Container } from "@mui/system"
 import avatarIcon from "../assets/AvatarIcon.svg"
 
-export const HomePage = () => {
+export const HomePage = ({textData}) => {
   return (
     <Container maxWidth="full" sx={{
       flexGrow: 1,
@@ -20,7 +20,7 @@ export const HomePage = () => {
             fontSize: 52,
             fontWeight: 800,
             color: "black.main"
-          }}> Hola !! Mi nombre es </Typography>
+          }}> {textData.home.text1}  </Typography>
 
           <Typography variant="h1" sx={{
             marginTop: 2,
@@ -44,7 +44,7 @@ export const HomePage = () => {
             fontSize: 26,
             fontWeight: "bold",
             color: "black.main"
-          }}> Conoce un poco más de mi </Typography>
+          }}> {textData.home.text2} </Typography>
 
           <IconButton href="https://github.com/WillyArdilaS" target="_blank" sx={{   
             display: "flex",  

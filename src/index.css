@@ -6,6 +6,10 @@ html {
   width: 55%;
 }
 
+.navBarLogoMobile {
+  width: 100%;
+}
+
 .footerLogo {
   width: 20%;
 }
@@ -17,4 +21,8 @@ html {
 .projectImage {
   width: 100%;
   border-radius: 16px;
+}
+
+.languageIcon {
+  width: 70%;
 }

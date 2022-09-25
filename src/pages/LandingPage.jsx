@@ -1,26 +1,26 @@
 import { Box } from "@mui/material"
 import { HomePage, ProfilePage, StudiesPage, ExperiencePage, PortfolioPage, ContactPage } from "./"
 
-export const LandingPage = () => {
+export const LandingPage = ({language, textData}) => {
   return (
     <Box>
       <Box id="home">
-        <HomePage />
+        <HomePage textData={textData} />
       </Box>
       <Box id="profile">
-        <ProfilePage />
+        <ProfilePage textData={textData} />
       </Box>
       <Box id="studies">
-        <StudiesPage />
+        <StudiesPage language={language} textData={textData} />
       </Box>
       <Box id="experience">
-        <ExperiencePage />
+        <ExperiencePage language={language} textData={textData} />
       </Box>
       <Box id="portfolio">
-        <PortfolioPage />
+        <PortfolioPage language={language} textData={textData} />
       </Box>
       <Box id="contact">
-        <ContactPage />
+        <ContactPage textData={textData} />
       </Box>
     </Box>
   )

@@ -1,9 +1,12 @@
 import * as React from 'react';
 import logo from "../assets/DefaultLogo.svg"
+import spanishFlag from "../assets/Spanish.png"
+import englishFlag from "../assets/English.png"
 import MenuIcon from '@mui/icons-material/Menu'
 import {
     AppBar,
     Box,
+    Button,
     Container,
     IconButton,
     Menu,
@@ -12,7 +15,7 @@ import {
 } from '@mui/material';
 import { Link } from "react-scroll"
 
-export const NavBar = () => {
+export const NavBar = ({language, setLanguage, textData}) => {
   const [anchorNav, setAnchorNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -21,6 +24,10 @@ export const NavBar = () => {
 
   const handleCloseNavMenu = () => {
     setAnchorNav(null);
+  }
+
+  const handleLanguage = () => {
+    language === "spanish" ? setLanguage("english") : setLanguage("spanish");
   }
 
   return (
@@ -32,7 +39,7 @@ export const NavBar = () => {
                     <img className="navBarLogo" src={logo}/>
                 </Box>
                 
-                <Typography variant="h4" nowrap sx={{
+                <Typography variant="h4" sx={{
                     display: {xs: "none", md: "flex"}, 
                     fontFamily: "Open Sans",
                     fontSize: 16,
@@ -42,47 +49,55 @@ export const NavBar = () => {
 
                 <Box sx={{display: {xs: "none", md: "flex"}, flex: 1, alignItems: "center", justifyContent: "end", mr:4, cursor: "pointer"}}>
                         <Link activeClass="active" smooth spy to="home"> 
-                            <Typography sx={{ml: 6}}> Inicio </Typography>
+                            <Typography sx={{ml: 6, fontWeight: "bold"}}> {textData.navBar.text1} </Typography>
                         </Link>
 
                         <Link activeClass="active" smooth spy to="profile"> 
-                            <Typography sx={{ml: 6}}> Perfil </Typography>
+                            <Typography sx={{ml: 6, fontWeight: "bold"}}> {textData.navBar.text2} </Typography>
                         </Link>
 
                         <Link activeClass="active" smooth spy to="studies"> 
-                            <Typography sx={{ml: 6}}> Estudios </Typography>
+                            <Typography sx={{ml: 6, fontWeight: "bold"}}> {textData.navBar.text3} </Typography>
                         </Link>
 
                         <Link activeClass="active" smooth spy to="experience"> 
-                            <Typography sx={{ml: 6}}> Experiencia </Typography>
+                            <Typography sx={{ml: 6, fontWeight: "bold"}}> {textData.navBar.text4} </Typography>
                         </Link>
 
                         <Link activeClass="active" smooth spy to="portfolio"> 
-                            <Typography sx={{ml: 6}}> Portafolio </Typography>
+                            <Typography sx={{ml: 6, fontWeight: "bold"}}> {textData.navBar.text5} </Typography>
                         </Link>
 
                         <Link activeClass="active" smooth spy to="contact"> 
-                            <Typography sx={{ml: 6}}> Contacto </Typography>
+                            <Typography sx={{ml: 6, fontWeight: "bold"}}> {textData.navBar.text6} </Typography>
                         </Link>
+
+                        <Button onClick={handleLanguage} sx={{width: "8%", ml: 2, padding: 2 }}> 
+                            <img src={language === "spanish" ? spanishFlag : englishFlag} className="languageIcon" /> 
+                        </Button>
                 </Box>
 
                 { /* Mobile */ }
-                <Box sx={{display: {xs: "flex", md: "none"}}}> 
-                    <img className="navBarLogo" src={logo}/>
+                <Box sx={{display: {xs: "flex", md: "none"}, justifyContent: "center"}}> 
+                    <img className="navBarLogoMobile" src={logo}/>
                 </Box>
                 
-                <Typography variant="h4" nowrap sx={{
+                <Typography variant="h4" sx={{
+                    width: "100%",
                     display: {xs: "flex", md: "none"}, 
-                    flexGrow: 1,
-                    mr: 5,
+                    mr: 2,
                     fontFamily: "Open Sans",
                     fontSize: 14,
                     fontWeight: "bold",
                     textAlign: "center",
                     color: "inherit"
-                }}> William Ardila Sánchez </Typography>
+                }}> Willy AS </Typography>
 
-                <Box sx={{display: {xs: "flex", md: "none"}, flexGrow: 1}}>
+                <Box sx={{display: {xs: "flex", md: "none"}}}>
+                    <Button onClick={handleLanguage} sx={{width: "8%"}}> 
+                        <img src={language === "spanish" ? spanishFlag : englishFlag} className="languageIcon" /> 
+                    </Button>
+
                     <IconButton size="large" aria-label="aacount of current user" aria-controls="menu-appBar" 
                     aria-haspopup="true" color="inherit" onClick={handleOpenNavMenu}>
                         <MenuIcon /> 
@@ -93,30 +108,30 @@ export const NavBar = () => {
                     onClose={handleCloseNavMenu} sx={{display: {xs: "block", md: "none"}}}>
 
                         <Link activeClass="active" smooth spy to="home"> 
-                            <Typography sx={{mr: 2, padding: 2, cursor: "pointer"}}> Inicio </Typography>
+                            <Typography sx={{mr: 2, padding: 2, fontWeight: "bold", cursor: "pointer"}}> {textData.navBar.text1} </Typography>
                         </Link>
 
                         <Link activeClass="active" smooth spy to="profile"> 
-                            <Typography sx={{mr: 2, padding: 2, cursor: "pointer"}}> Perfil </Typography>
+                            <Typography sx={{mr: 2, padding: 2, fontWeight: "bold", cursor: "pointer"}}> {textData.navBar.text2} </Typography>
                         </Link>
 
                         <Link activeClass="active" smooth spy to="studies"> 
-                            <Typography sx={{mr: 2, padding: 2, cursor: "pointer"}}> Estudios </Typography>
+                            <Typography sx={{mr: 2, padding: 2, fontWeight: "bold", cursor: "pointer"}}> {textData.navBar.text3}  </Typography>
                         </Link>
 
                         <Link activeClass="active" smooth spy to="experience"> 
-                            <Typography sx={{mr: 2, padding: 2, cursor: "pointer"}}> Experiencia </Typography>
+                            <Typography sx={{mr: 2, padding: 2, fontWeight: "bold", cursor: "pointer"}}> {textData.navBar.text4}  </Typography>
                         </Link>
 
                         <Link activeClass="active" smooth spy to="portfolio"> 
-                            <Typography sx={{mr: 2, padding: 2, cursor: "pointer"}}> Portafolio </Typography>
+                            <Typography sx={{mr: 2, padding: 2, fontWeight: "bold", cursor: "pointer"}}> {textData.navBar.text5} </Typography>
                         </Link>
 
                         <Link activeClass="active" smooth spy to="contact"> 
-                            <Typography sx={{mr: 2, padding: 2, cursor: "pointer"}}> Contacto </Typography>
+                            <Typography sx={{mr: 2, padding: 2, fontWeight: "bold", cursor: "pointer"}}> {textData.navBar.text6} </Typography>
                         </Link>
                     </Menu>
-                </Box>
+                </Box> 
             </Toolbar>
         </Container>
     </AppBar>

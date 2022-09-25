@@ -5,7 +5,7 @@ import cssLogo from "../assets/CssLogo.png"
 import jsLogo from "../assets/JsLogo.png"
 import reactLogo from "../assets/ReactLogo.png"
 
-export const ProfilePage = () => {
+export const ProfilePage = ({textData}) => {
   return (
     <Container maxWidth="full" sx={{
       flexGrow: 1,
@@ -21,7 +21,7 @@ export const ProfilePage = () => {
         textAlign: "center",
         textTransform: "uppercase",
         color: "black.main"
-      }}> Perfil </Typography>
+      }}> {textData.profile.title} </Typography>
 
       <Typography variant="h1" sx={{
         width: {md: "70%"},
@@ -33,10 +33,7 @@ export const ProfilePage = () => {
         textAlign: "center",
         lineHeight: 1.6,
         color: "black.main"
-      }}>
-        Soy un desarrollador FrontEnd que le encanta hacer páginas web con diseños coloridos 
-        y llenos de personalidad
-      </Typography>
+      }}> {textData.profile.text1} </Typography>
 
       <Grid container>
         <Grid item xs={12} md={3} sx={{
