@@ -9,7 +9,7 @@ export const ProfilePage = ({textData}) => {
   return (
     <Container maxWidth="full" sx={{
       flexGrow: 1,
-      paddingTop: {xs: 10, md: 14},
+      paddingTop: 10,
       paddingBottom: 8,
       backgroundColor: 'primary.main'
     }}>
@@ -26,7 +26,7 @@ export const ProfilePage = ({textData}) => {
       <Typography variant="h1" sx={{
         width: {md: "70%"},
         marginX: "auto",
-        marginTop: 4,
+        marginTop: 8,
         fontFamily: "Open Sans",
         fontSize: 24,
         fontWeight: "bold",
@@ -41,7 +41,7 @@ export const ProfilePage = ({textData}) => {
           textAlign: "center",
         }}>
           <Paper sx={{
-            width: {xs: "60%", sm: "50%", md: "70%", lg: "70%"},
+            width: {xs: "60%", sm: "45%", md: "65%"},
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -60,7 +60,7 @@ export const ProfilePage = ({textData}) => {
           textAlign: "center",
         }}>
           <Paper sx={{
-            width: {xs: "60%", sm: "50%", md: "70%", lg: "70%"},
+            width: {xs: "60%", sm: "45%", md: "65%"},
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -79,7 +79,7 @@ export const ProfilePage = ({textData}) => {
           textAlign: "center",
         }}>
           <Paper sx={{
-            width: {xs: "60%", sm: "50%", md: "70%", lg: "70%"},
+            width: {xs: "60%", sm: "45%", md: "65%"},
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -98,7 +98,7 @@ export const ProfilePage = ({textData}) => {
           textAlign: "center",
         }}>
           <Paper sx={{
-            width: {xs: "60%", sm: "50%", md: "70%", lg: "70%"},
+            width: {xs: "60%", sm: "45%", md: "65%"},
             display: "flex",
             justifyContent: "center",
             alignItems: "center",

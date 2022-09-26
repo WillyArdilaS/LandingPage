@@ -13,7 +13,7 @@ export const StudiesPage = ({language, textData}) => {
     <Container maxWidth="full" sx={{
       flexGrow: 1,
       paddingX: {xs: 5, md: 16},
-      paddingTop: {xs: 10, md: 14},
+      paddingTop: 10,
       paddingBottom: 8,
       backgroundColor: 'white.main'
     }}>
@@ -29,12 +29,12 @@ export const StudiesPage = ({language, textData}) => {
 
       <Grid container>
         {cardData.map((card) =>(
-          <Grid item xs={12} md={6} sx={{
+          <Grid key={card.id} item xs={12} md={6} sx={{
             marginTop: {xs: 2, md: 0},
             textAlign: "center",
           }}>
-            <Paper key={card.id} sx={{
-              width: {xs: "100%", md: "65%"}, 
+            <Paper sx={{
+              width: {xs: "100%", sm: "80%", md: "70%"}, 
               marginTop: 6, 
               marginX: "auto", 
               paddingY: 2, 

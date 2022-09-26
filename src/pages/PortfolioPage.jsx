@@ -12,7 +12,7 @@ export const PortfolioPage = ({language, textData}) => {
   return (
     <Container maxWidth="full" sx={{
       flexGrow: 1,
-      paddingTop: {xs: 10, md: 14},
+      paddingTop: 10,
       paddingBottom: 6,
       backgroundColor: 'white.main'
     }}>
@@ -30,7 +30,7 @@ export const PortfolioPage = ({language, textData}) => {
         <Box key={card.id} sx={{width: "90%", marginX: "auto"}}>
           <Paper sx={{
             width: "100%", 
-            margin: 6, 
+            margin: 8, 
             marginX: "auto", 
             padding: 3, 
             borderRadius: 5, 

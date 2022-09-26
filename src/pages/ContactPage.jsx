@@ -21,7 +21,7 @@ export const ContactPage = ({textData}) => {
   return (
     <Container maxWidth="full" sx={{
       flexGrow: 1,
-      paddingTop: {xs: 10, md: 8},
+      paddingTop: 8,
       paddingBottom: 6,
       backgroundColor: 'primary.main'
     }}>
@@ -74,7 +74,7 @@ export const ContactPage = ({textData}) => {
             height: 50,
             display: "flex", 
             alignItems: "center",
-            marginTop: 6,
+            marginTop: {xs: 6, md: 8},
             borderRadius: 2,
             fontFamily: "Open Sans",
             fontSize: 16,

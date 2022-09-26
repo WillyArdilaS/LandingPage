@@ -14,7 +14,7 @@ export const Portfolio = [
             {
                 id: 2,
                 name: "Galería de héroes Marvel - DC",
-                description: "App que muestra un top 20 de héroes de Marvel Y DC. Todos los datos son traidos desde una API propia",
+                description: "App que muestra un top 20 de héroes de Marvel Y DC. Todos los datos son traídos desde una API propia",
                 stack: "React - JSX - Tailwindcss - Heroku",
                 link_preview: "https://willyas-marveldcheroes.netlify.app/",
                 link_github: "https://github.com/WillyArdilaS/MarvelDCHeroes",
@@ -36,7 +36,7 @@ export const Portfolio = [
                 name: "Landing Page",
                 description: "Mi landing page donde puedes saber quién soy y conocer un poco más de mis proyectos",
                 stack: "React - JSX - MaterialUI",
-                link_preview: "#",
+                link_preview: "https://willyas-landingpage.netlify.app/",
                 link_github: "https://github.com/WillyArdilaS/LandingPage",
                 image: "LandingPage.png"
             }
@@ -78,9 +78,9 @@ export const Portfolio = [
                 name: "Landing Page",
                 description: "My landing page where you can find out who I am and learn a little more about my projects",
                 stack: "React - JSX - MaterialUI",
-                link_preview: "#",
+                link_preview: "https://willyas-landingpage.netlify.app/",
                 link_github: "https://github.com/WillyArdilaS/LandingPage",
-                image: "LandingPage.png"
+                image: "LandingPageEn.png"
             }
         ]
     } 

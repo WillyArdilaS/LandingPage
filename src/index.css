@@ -3,15 +3,15 @@ html {
 }
 
 .navBarLogo {
-  width: 55%;
+  width: 20%;
 }
 
 .navBarLogoMobile {
-  width: 100%;
+  width: 30%;
 }
 
 .footerLogo {
-  width: 20%;
+  width: 25%;
 }
 
 .profileCardImage {
@@ -24,5 +24,5 @@ html {
 }
 
 .languageIcon {
-  width: 70%;
+  width: 75%;
 }

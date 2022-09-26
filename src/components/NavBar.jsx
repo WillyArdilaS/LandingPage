@@ -35,17 +35,17 @@ export const NavBar = ({language, setLanguage, textData}) => {
         <Container maxWidth="full">
             <Toolbar>
                 { /* Desktop */ }
-                <Box sx={{display: {xs: "none", md: "flex"}}}> 
+                <Box sx={{display: {xs: "none", md: "flex"}, justifyContent: "flex-start", alignItems: "center"}}> 
                     <img className="navBarLogo" src={logo}/>
+                    <Typography variant="h4" sx={{
+                        display: {xs: "none", md: "flex"}, 
+                        fontFamily: "Open Sans",
+                        fontSize: 18,
+                        fontWeight: "bold",
+                        color: "inherit"
+                    }}> William Ardila Sánchez </Typography>
                 </Box>
                 
-                <Typography variant="h4" sx={{
-                    display: {xs: "none", md: "flex"}, 
-                    fontFamily: "Open Sans",
-                    fontSize: 16,
-                    fontWeight: "bold",
-                    color: "inherit"
-                }}> William Ardila Sánchez </Typography>
 
                 <Box sx={{display: {xs: "none", md: "flex"}, flex: 1, alignItems: "center", justifyContent: "end", mr:4, cursor: "pointer"}}>
                         <Link activeClass="active" smooth spy to="home"> 
@@ -78,22 +78,22 @@ export const NavBar = ({language, setLanguage, textData}) => {
                 </Box>
 
                 { /* Mobile */ }
-                <Box sx={{display: {xs: "flex", md: "none"}, justifyContent: "center"}}> 
+                <Box sx={{display: {xs: "flex", md: "none"}, alignItems: "center", ml:-2}}> 
                     <img className="navBarLogoMobile" src={logo}/>
+                    <Typography variant="h4" sx={{
+                        width: "100%",
+                        display: {xs: "flex", md: "none"}, 
+                        mr: 8,
+                        fontFamily: "Open Sans",
+                        fontSize: 18,
+                        fontWeight: "bold",
+                        textAlign: "center",
+                        color: "inherit"
+                    }}> Willy AS </Typography>
                 </Box>
                 
-                <Typography variant="h4" sx={{
-                    width: "100%",
-                    display: {xs: "flex", md: "none"}, 
-                    mr: 2,
-                    fontFamily: "Open Sans",
-                    fontSize: 14,
-                    fontWeight: "bold",
-                    textAlign: "center",
-                    color: "inherit"
-                }}> Willy AS </Typography>
 
-                <Box sx={{display: {xs: "flex", md: "none"}}}>
+                <Box sx={{width: "50%", display: {xs: "flex", md: "none"}, justifyContent: "flex-end", mr:-1}}>
                     <Button onClick={handleLanguage} sx={{width: "8%"}}> 
                         <img src={language === "spanish" ? spanishFlag : englishFlag} className="languageIcon" /> 
                     </Button>
